@@ -708,7 +708,7 @@ section {
   transition: var(--transition-mode);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   section {
     min-height: 100vh;
     width: 100%;
@@ -736,7 +736,7 @@ section {
   }
   .portfolios {
     grid-template-columns: 1fr !important;
-    padding: 3rem 2rem !important;
+    padding: 3rem 2rem;
   }
   .blogs {
     grid-template-columns: 1fr !important;
