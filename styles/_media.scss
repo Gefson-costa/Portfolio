@@ -1,4 +1,4 @@
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
 
     section {
         min-height: 100vh;
@@ -203,27 +203,6 @@
         padding: 5rem 3rem;
     }
 
-    .about-container {
-        grid-template-columns: 1fr;
-
-        .right-about {
-            grid-template-columns: 1fr;
-            padding-top: 2.5rem;
-        }
-
-        .left-about {
-            padding-right: 0;
-
-            p {
-                padding-left: 0;
-            }
-        }
-    }
-
-    .timeline {
-        grid-template-columns: 1fr;
-        padding-bottom: 6rem;
-    }
 
     .about-stats {
         .progress-bars {
