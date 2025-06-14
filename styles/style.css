@@ -852,6 +852,10 @@ section {
   .section {
     padding: 7rem 3rem;
   }
+  .portfolios {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
   .about-stats .progress-bars {
     grid-template-columns: 1fr;
   }
