@@ -3,7 +3,7 @@
     section {
         min-height: 100vh;
         width: 100%;
-        padding: 3rem 5rem !important;
+        padding: 3rem 2rem !important;
     }
 
     .about-container {
@@ -21,6 +21,11 @@
                 padding-left: 0;
             }
         }
+    }
+
+    .portfolios {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
     .timeline {
