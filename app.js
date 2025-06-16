@@ -8,7 +8,7 @@ function PageTransitions() {
     // button click active class
     for (let i = 0; i < sectBtn.length; i++) {
         sectBtn[i].addEventListener('click', function (e) {
-            let currentBtn = document.querySelectorAll('.active-btn') // porque nao usar o arrow function?
+            let currentBtn = document.querySelectorAll('.active-btn')
             currentBtn[0].className = currentBtn[0].className.replace('active-btn', '')
             this.className += ' active-btn'
         })
@@ -18,14 +18,14 @@ function PageTransitions() {
     allSections.addEventListener("click", (e) => {
         const id = e.target.dataset.id
         if (id) {
-            // remove selected from the other btns
-            sectBtn.forEach((btn) => { // professor color btns em vez de btn 
+
+            sectBtn.forEach((btn) => {
                 btn.classList.remove('active')
             })
 
-            e.target.classList.add('active') // como o 'event. vem do clique entao ele adionara em quem clicou o evento
+            e.target.classList.add('active')
 
-            //hide other sections
+
             sections.forEach((section) => {
                 section.classList.remove('active')
             })
@@ -43,23 +43,6 @@ function PageTransitions() {
     })
 
 }
-
-
-/*function PageTransitions() {
-  // Adiciona UM único evento no container pai
-    sectBtns[0].addEventListener('click', (e) => {
-    // Verifica se o clique foi em um botão
-    const clickedBtn = e.target.closest('.control');
-    if (!clickedBtn) return;
-
-    // Remove classe ativa de todos os botões
-    sectBtn.forEach(btn => btn.classList.remove('active-btn'));
-    
-    // Adiciona classe no botão clicado
-    clickedBtn.classList.add('active-btn');
-    });
-} */
-
 
 
 PageTransitions()

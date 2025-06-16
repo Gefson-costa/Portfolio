@@ -34,7 +34,6 @@ body {
 .bright-mode {
     --color-primary: #ffffff;
     --color-secondary: #3B82F6;
-    /* Azul moderno */
     --color-white: #1a202c;
     --color-black: #ffffff;
     --color-grey0: #f8fafc;
@@ -70,40 +69,34 @@ section {
 }
 
 .section {
-    // serve para esconder a pagina
     transform: translateY(-100) scale(0);
     transition: var(--transition-mode);
     background-color: var(--color-primary);
 }
 
 .sec1 {
-    // serve para mostrar a pagina
     display: none;
     transform: translateY(0) scale(1);
 
 }
 
 .sec2 {
-    // serve para mostrar a pagina
     display: none;
     transform: translateY(0) scale(1);
 }
 
 .sec3 {
-    // serve para mostrar a pagina
     display: none;
     transform: translateY(0) scale(1);
 
 }
 
 .sec4 {
-    // serve para mostrar a pagina
     display: none;
     transform: translateY(0) scale(1);
 }
 
 .sec5 {
-    // serve para mostrar a pagina
     display: none;
     transform: translateY(0) scale(1);
 }
@@ -182,7 +175,6 @@ section {
     transition: all .1s ease-in-out;
 
     &:active {
-        //rever isso
         transform: translateY(-3px);
     }
 
@@ -204,7 +196,7 @@ section {
     .left-header {
         display: flex;
         align-items: center;
-        position: relative; // a imagem tera algo por tras dela o h-shape
+        position: relative;
 
         .h-shape {
             transition: all .4s ease-in-out;
@@ -231,9 +223,9 @@ section {
                 height: 100%;
                 object-fit: cover;
                 transition: all .4s ease-in-out;
-                filter: grayscale(100%); // nao sei oque é isso pesquisar mais tarde
+                filter: grayscale(100%);
 
-                &:hover {
+                is tarde &:hover {
                     filter: grayscale(0);
                 }
             }
@@ -496,7 +488,7 @@ section {
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            opacity: 0; // prestar atencao aqui
+            opacity: 0;
             transform: scale(0);
             transition: var(--transition-mode);
 
@@ -548,7 +540,7 @@ section {
 }
 
 
-//Blogs secrtion
+
 
 .blogs {
     display: grid;
@@ -619,7 +611,7 @@ section {
     padding-top: 3.5rem;
 
     .left-contact {
-        flex: 2; //a saber mais tarde    
+        flex: 2;
 
         h4 {
             margin-top: 1rem;
@@ -668,7 +660,7 @@ section {
                 background-color: var(--color-grey-5);
                 cursor: pointer;
                 justify-content: center;
-                // porque quer que o incone fique redondo o codico abeixo ajuda
+
                 width: 50px;
                 height: 50px;
                 border-radius: 50%;
@@ -707,12 +699,12 @@ section {
                 font-size: inherit;
                 font-family: inherit;
                 padding: .8rem 1.1rem;
-                outline: none; // preciso verficar
+                outline: none;
                 border: none;
                 background-color: var(--color-grey-5);
                 width: 100%;
                 color: var(--color-white);
-                resize: none; //need to check this again
+                resize: none;
             }
         }
 
@@ -720,7 +712,6 @@ section {
             display: flex;
 
             :last-child {
-                //uso o metodo para juntar email e nome e para dar distancia 
                 margin-left: 1.5rem;
             }
         }
@@ -737,105 +728,103 @@ section {
 .btn-con {
     display: flex;
     align-self: flex-start;
-    // o align-self aqui foi usado porque a linha criada no .main-btn usando o border exedia 
-    // para caso de teste é so remover o .btn-con para ver como ficou
-}
 
-.main-btn {
-    border-radius: 30px;
-    color: inherit;
-    font-weight: 600;
-    position: relative;
-    border: 1px solid var(--color-secondary);
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-
-    .btn-text {
-        padding: 0 2rem;
-    }
-
-    .btn-icon {
-        color: var(--color-white);
+    .main-btn {
+        border-radius: 30px;
+        color: inherit;
+        font-weight: 600;
+        position: relative;
+        border: 1px solid var(--color-secondary);
         display: flex;
         align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        padding: 1rem;
-        background-color: var(--color-secondary);
+        overflow: hidden;
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            transform: translateX(100%);
-            transition: var(--transition-mode);
-            z-index: -1;
-
+        .btn-text {
+            padding: 0 2rem;
         }
 
-        &:hover {
+        .btn-icon {
+            color: var(--color-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            padding: 1rem;
+            background-color: var(--color-secondary);
+
             &::before {
-                width: 100%;
-                height: 100%;
-                background-color: var(--color-secondary);
-                transform: translateX(0);
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translateX(100%);
                 transition: var(--transition-mode);
+                z-index: -1;
+
+            }
+
+            &:hover {
+                &::before {
+                    width: 100%;
+                    height: 100%;
+                    background-color: var(--color-secondary);
+                    transform: translateX(0);
+                    transition: var(--transition-mode);
+                }
             }
         }
     }
-}
 
 
-.main-title {
+    .main-title {
 
-    text-align: center;
+        text-align: center;
 
-    h2 {
-        position: relative;
-        text-transform: uppercase;
-        font-size: 4rem;
-        font-weight: 700;
+        h2 {
+            position: relative;
+            text-transform: uppercase;
+            font-size: 4rem;
+            font-weight: 700;
 
-        span {
-            color: var(--color-secondary)
-        }
+            span {
+                color: var(--color-secondary)
+            }
 
-        .bg-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            color: var(--color-grey-5);
-            transition: var(--transition-mode);
-            z-index: -1;
-            transform: translate(-50%, -50%);
-            font-weight: 800;
-            font-size: 6rem;
+            .bg-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                color: var(--color-grey-5);
+                transition: var(--transition-mode);
+                z-index: -1;
+                transform: translate(-50%, -50%);
+                font-weight: 800;
+                font-size: 6rem;
+            }
+
         }
 
     }
 
-}
+    .stat-title {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        text-align: center;
+        padding: 3.5rem, 0;
+        position: relative;
+        margin-bottom: 2rem;
 
-.stat-title {
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    text-align: center;
-    padding: 3.5rem, 0;
-    position: relative;
-    margin-bottom: 2rem;
-
-    &::before {
-        content: "";
-        position: absolute;
-        left: 50%;
-        top: 10%;
-        width: 40%;
-        height: 1px;
-        background-color: var(--color-grey-5);
-        transform: translateX(-50%);
-        transition: var(--transition-mode);
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 10%;
+            width: 40%;
+            height: 1px;
+            background-color: var(--color-grey-5);
+            transform: translateX(-50%);
+            transition: var(--transition-mode);
+        }
     }
 }
 
